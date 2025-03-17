@@ -1,14 +1,18 @@
 package com.flipkart.pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchPages {
   
@@ -49,18 +53,21 @@ public class SearchPages {
     }
     
     public void selectSortOption() {
-    	List<WebElement> sortingOptions = driver.findElements(By.xpath("//div[@class='sHCOk2']/div[contains(@class, 'zg-M3Z')]"));
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Iterate through each sorting option
+        // Fetch sorting options again if stale
+        List<WebElement> sortingOptions = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+                By.xpath("//div[@class='sHCOk2']/div[contains(@class, 'zg-M3Z')]")
+        ));
+
         for (WebElement option : sortingOptions) {
-            String optionText = option.getText();
-            boolean isClickable = option.isDisplayed() && option.isEnabled();
-
-            if (isClickable) {
-            	System.out.println("✅ Option: " + optionText + " is SELECTABLE");
-            	option.click();
-            } else {
-                System.out.println("❌ Option: " + optionText + " is NOT SELECTABLE");
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                System.out.println("✅ Selected: " + option.getText());
+                break;
+            } catch (StaleElementReferenceException e) {
+                System.out.println("Retrying stale element...");
+                sortingOptions = driver.findElements(By.xpath("//div[@class='sHCOk2']/div[contains(@class, 'zg-M3Z')]"));
             }
         }
     }

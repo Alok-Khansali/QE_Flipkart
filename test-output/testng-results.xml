@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-17T10:47:55 IST" name="Default suite" finished-at="2025-03-17T10:48:07 IST" duration-ms="11617">
+    <groups>
+    </groups>
+    <test started-at="2025-03-17T10:47:55 IST" name="Default test" finished-at="2025-03-17T10:48:07 IST" duration-ms="11617">
+      <class name="com.flipkart.tests.WebDriverManager">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:47:56 IST" name="setup" finished-at="2025-03-17T10:48:05 IST" duration-ms="9405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:48:05 IST" name="search" finished-at="2025-03-17T10:48:07 IST" duration-ms="2140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:48:07 IST" name="quitDriver" finished-at="2025-03-17T10:48:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- com.flipkart.tests.WebDriverManager -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
