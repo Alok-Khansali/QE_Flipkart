@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-17T10:47:55 IST" name="Default suite" finished-at="2025-03-17T10:48:07 IST" duration-ms="11617">
+  <suite started-at="2025-03-17T17:05:39 IST" name="Default suite" finished-at="2025-03-17T17:06:32 IST" duration-ms="52999">
     <groups>
     </groups>
-    <test started-at="2025-03-17T10:47:55 IST" name="Default test" finished-at="2025-03-17T10:48:07 IST" duration-ms="11617">
+    <test started-at="2025-03-17T17:05:39 IST" name="Default test" finished-at="2025-03-17T17:06:32 IST" duration-ms="52999">
       <class name="com.flipkart.tests.WebDriverManager">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:47:56 IST" name="setup" finished-at="2025-03-17T10:48:05 IST" duration-ms="9405" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:05:39 IST" name="setup" finished-at="2025-03-17T17:05:49 IST" duration-ms="10737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="search()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:48:05 IST" name="search" finished-at="2025-03-17T10:48:07 IST" duration-ms="2140" status="PASS">
+        <test-method signature="search()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:05:49 IST" name="search" finished-at="2025-03-17T17:05:53 IST" duration-ms="3949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.flipkart.tests.WebDriverManager@49139829]" started-at="2025-03-17T10:48:07 IST" name="quitDriver" finished-at="2025-03-17T10:48:07 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:05:53 IST" name="quitDriver" finished-at="2025-03-17T17:05:55 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:05:55 IST" name="setup" finished-at="2025-03-17T17:06:03 IST" duration-ms="8158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Partialsearch()[pri:1, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:06:03 IST" name="Partialsearch" finished-at="2025-03-17T17:06:17 IST" duration-ms="13162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Partialsearch -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:06:17 IST" name="quitDriver" finished-at="2025-03-17T17:06:19 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:06:19 IST" name="setup" finished-at="2025-03-17T17:06:28 IST" duration-ms="8876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Invalidsearch()[pri:2, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:06:28 IST" name="Invalidsearch" finished-at="2025-03-17T17:06:29 IST" duration-ms="1925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalidsearch -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.flipkart.tests.WebDriverManager@4550bb58]" started-at="2025-03-17T17:06:29 IST" name="quitDriver" finished-at="2025-03-17T17:06:32 IST" duration-ms="2093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->

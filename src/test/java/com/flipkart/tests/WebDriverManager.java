@@ -24,18 +24,30 @@ public class WebDriverManager {
 	
 	
 	
-	@Test
+	@Test(priority = 0)
 	public void search() throws Exception {
 		home.SearchQuery("Poco");
 		home.selectSortOption();
-//		home.selectProduct();
+		home.selectProduct();
 	}
 	
+	@Test(priority = 1)
+	public void Partialsearch() throws Exception {
+		home.SearchQuery("Samsu");
+		home.validateSearch("Casi");
+		
+	}
+	
+	@Test(priority = 2)
+	public void Invalidsearch() throws Exception {
+		home.SearchInvalid("ajknakj");
+		
+	}
 	
 	@AfterMethod
     public void quitDriver() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
