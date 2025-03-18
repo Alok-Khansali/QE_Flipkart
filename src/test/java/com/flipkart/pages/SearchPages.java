@@ -26,9 +26,9 @@ public class SearchPages {
 	@CacheLookup
 	WebElement selectproduct; 
 	
-	@FindBy(how = How.CLASS_NAME, using = "zg-M3Z")
-    @CacheLookup
-    List<WebElement> sortOptions;
+	@FindBy(how= How.XPATH, using = "//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")
+	@CacheLookup
+	WebElement search;
 	
 	public SearchPages(WebDriver d) {
 		driver = d;
@@ -44,6 +44,33 @@ public class SearchPages {
         System.out.println("Search is successfull!");
     }
     
+    public void SearchInvalid(String query) {
+        searchbar.sendKeys(query);
+        searchbar.submit();
+        
+        if(driver.findElement(By.className("BHPsUQ")).isDisplayed())
+        	System.out.println("No products found. Try a different search term");
+        else
+        	System.out.println("Search is successfull!");
+    }
+    
+    public void validateSearch(String query) {
+        search.clear();
+        
+    	search.sendKeys(query);
+        try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+        if(driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).isDisplayed()) {
+        	System.out.println("Auto-suggestions appear matching entered characters.");
+        }
+        
+    }
+    
     public void selectProduct() throws Exception {
     	
     	Thread.sleep(1000);
@@ -55,7 +82,7 @@ public class SearchPages {
     public void selectSortOption() {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Fetch sorting options again if stale
+        
         List<WebElement> sortingOptions = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
                 By.xpath("//div[@class='sHCOk2']/div[contains(@class, 'zg-M3Z')]")
         ));
@@ -68,6 +95,7 @@ public class SearchPages {
             } catch (StaleElementReferenceException e) {
                 System.out.println("Retrying stale element...");
                 sortingOptions = driver.findElements(By.xpath("//div[@class='sHCOk2']/div[contains(@class, 'zg-M3Z')]"));
+                
             }
         }
     }
