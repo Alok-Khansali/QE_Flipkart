@@ -8,18 +8,20 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.flipkart.pages.FilteringPage;
 import com.flipkart.pages.SearchPages;
 
 public class WebDriverManager {
 	WebDriver driver;
 	SearchPages home;
-	
+	FilteringPage filters;
 	@BeforeMethod
 	public void setup() {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 		home = new SearchPages(driver);
+		filters = new FilteringPage(driver, "Poco");
 	}
 	
 	
@@ -42,6 +44,11 @@ public class WebDriverManager {
 	public void Invalidsearch() throws Exception {
 		home.SearchInvalid("ajknakj");
 		
+	}
+	
+	@Test
+	public void FilterFuntions() {
+		filters.filteroptions();
 	}
 	
 	@AfterMethod
