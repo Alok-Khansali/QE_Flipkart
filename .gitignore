@@ -1,3 +1,4 @@
 test-output/
 *.xml
 .classpath
+/target/
