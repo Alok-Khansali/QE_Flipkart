@@ -31,14 +31,14 @@ public class WebDriverManager {
 		home.selectProduct();
 	}
 	
-	@Test(priority = 1)
+	@Test(dependsOnMethods = "search")
 	public void Partialsearch() throws Exception {
 		home.SearchQuery("Samsu");
 		home.validateSearch("Casi");
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(dependsOnMethods = "search")
 	public void Invalidsearch() throws Exception {
 		home.SearchInvalid("ajknakj");
 		
