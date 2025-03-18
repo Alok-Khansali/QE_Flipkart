@@ -8,6 +8,12 @@
           <include name="testLoginWithOtp"/>
           <include name="teardown"/>
           <include name="setup"/>
+<<<<<<< HEAD
+=======
+          <include name="Partialsearch"/>
+          <include name="quitDriver"/>
+          <include name="search"/>
+>>>>>>> fb7efedb034481dfe3a4ef40c46e3140421d3866
         </methods>
       </class> <!-- com.ibm.tests.FlipkartLoginTest -->
     </classes>
