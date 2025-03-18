@@ -84,4 +84,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
   <testcase classname="com.flipkart.tests.WebDriverManager" name="Partialsearch" time="0.0">
     <ignored/>
   </testcase> <!-- Partialsearch -->
+<testsuite ignored="0" hostname="IBM-FVLMB54" failures="0" tests="1" name="Default test" time="31.894" errors="0" timestamp="2025-03-18T12:32:45 IST">
+  <testcase classname="com.ibm.tests.FlipkartLoginTest" name="testLoginWithOtp" time="19.702"/>
 </testsuite> <!-- Default test -->
