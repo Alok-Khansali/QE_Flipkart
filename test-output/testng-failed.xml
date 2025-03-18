@@ -8,6 +8,7 @@
           <include name="testLoginWithOtp"/>
           <include name="teardown"/>
           <include name="setup"/>
+
           <include name="quitDriver"/>
           <include name="search"/>
         </methods>
