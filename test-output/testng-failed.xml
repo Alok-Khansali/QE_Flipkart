@@ -6,9 +6,8 @@
       <class name="com.flipkart.tests.WebDriverManager">
         <methods>
           <include name="setup"/>
-          <include name="Partialsearch"/>
+          <include name="FilterFuntions"/>
           <include name="quitDriver"/>
-          <include name="search"/>
         </methods>
       </class> <!-- com.flipkart.tests.WebDriverManager -->
     </classes>
