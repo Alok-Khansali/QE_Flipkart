@@ -12,7 +12,8 @@ import com.flipkart.pages.FilteringPage;
 import com.flipkart.pages.LoginPage;
 import com.flipkart.pages.SearchPages;
 
-public class WebDriverManager {
+public class LoginFunctinality {
+	
 	WebDriver driver;
 	SearchPages home;
 	FilteringPage filters;
@@ -27,25 +28,11 @@ public class WebDriverManager {
 		login = new LoginPage(driver);
 	}
 	
-	
-	
-	@Test(priority = 0)
-	public void search() throws Exception {
+	@Test
+	public void login() {
+		login.enterMobileNumber("9092314213");
+		login.enterOtpManually();
 		home.SearchQuery("Poco");
-		home.selectSortOption();
-		home.selectProduct();
-	}
-	
-	@Test(dependsOnMethods = "search")
-	public void Partialsearch() throws Exception {
-		home.SearchQuery("Samsu");
-		home.validateSearch("Casi");
-		
-	}
-	
-	@Test(dependsOnMethods = "search")
-	public void Invalidsearch() throws Exception {
-		home.SearchInvalid("ajknakj");
 		
 	}
 	
