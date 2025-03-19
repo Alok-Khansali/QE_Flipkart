@@ -29,28 +29,28 @@ public class WebDriverManager {
 	
 	
 	
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void search() throws Exception {
 		home.SearchQuery("Poco");
 		home.selectSortOption();
 		home.selectProduct();
 	}
 	
-	@Test(dependsOnMethods = "search")
+	@Test(priority = 2)
 	public void Partialsearch() throws Exception {
 		home.SearchQuery("Samsu");
 		home.validateSearch("Casi");
 		
 	}
 	
-	@Test(dependsOnMethods = "search")
+	@Test(priority = 3)
 	public void Invalidsearch() throws Exception {
 		home.SearchInvalid("ajknakj");
 		
 	}
 	
-	@Test
-	public void FilterFuntions() {
+	@Test(priority = 4)
+	public void FilterFuntions() throws Exception {
 		filters.filteroptions();
 	}
 	

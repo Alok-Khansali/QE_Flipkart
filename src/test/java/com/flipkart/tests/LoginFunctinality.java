@@ -37,7 +37,7 @@ public class LoginFunctinality {
 	}
 	
 	@Test
-	public void FilterFuntions() {
+	public void FilterFuntions() throws Exception {
 		filters.filteroptions();
 	}
 	

@@ -80,8 +80,9 @@ public class SearchPages {
         System.out.println("Product is selected!");
     }
     
-    public void selectSortOption() {
+    public void selectSortOption() throws Exception {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	Thread.sleep(1000);
 
         
         List<WebElement> sortingOptions = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
@@ -90,6 +91,7 @@ public class SearchPages {
 
         for (WebElement option : sortingOptions) {
             try {
+            	Thread.sleep(1000);
                 wait.until(ExpectedConditions.elementToBeClickable(option)).click();
                 System.out.println("✅ Selected: " + option.getText());
                 break;
