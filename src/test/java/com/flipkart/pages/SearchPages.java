@@ -102,4 +102,9 @@ public class SearchPages {
             }
         }
     }
+
+	public void selectProductByName(String productName) {
+		// TODO Auto-generated method stub
+		
+	}
 }

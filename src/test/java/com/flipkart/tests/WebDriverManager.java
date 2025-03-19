@@ -4,7 +4,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -51,13 +50,14 @@ public class WebDriverManager {
 	
 	@Test(priority = 4)
 	public void FilterFuntions() throws Exception {
-		filters.filteroptions();
+		filters.filterprice();
+		filters.selectfassured();
+		filters.selectrating();
+		filters.selectram();
 	}
 	
-	@AfterMethod
-    public void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+	/*
+	 * @AfterMethod public void quitDriver() { if (driver != null) { driver.quit();
+	 * } }
+	 */
 }
