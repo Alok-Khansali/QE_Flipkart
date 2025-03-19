@@ -27,7 +27,11 @@ public class FlipkartLoginTest {
     @Test(priority = 1)
     public void testLoginWithOtp() {
 		/* loginPage.clickLogin(); */
-        loginPage.enterMobileNumber("6396762877");
+    	//kk
+        loginPage.enterMobileNumber("6207610441");
+    	//loginPage.enterMobileNumber("6396762877");
+    	// vg
+    	//loginPage.enterMobileNumber("9092314213");
     }
 
 	/*

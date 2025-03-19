@@ -57,14 +57,39 @@ public class LoginPage {
             mobileNumberInput.clear();
             mobileNumberInput.sendKeys(mobileNumber);
             System.out.println("✅ Successfully entered Mobile Number: " + mobileNumber);
+
+            // Click "Request OTP"
             WebElement RequestOTP = driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[2]/div/form/div[3]/button"));
-        	RequestOTP.click();
+            RequestOTP.click();
+
+            // Step 5: Check if "Max Attempts Reached" message appears
+            if (isMaxAttemptsReached()) {
+                System.out.println("🚨 Maximum OTP attempts reached. Please try again after 24 hours.");
+                return; // Stop execution here
+            }
+
+            // Proceed to enter OTP manually
             enterOtpManually();
 
         } catch (NoSuchElementException e) {
             System.out.println("❌ Error: Mobile input field not found.");
         }
     }
+
+    /**
+     * Checks if Flipkart shows "Maximum attempts reached. Retry in 24 hours." error.
+     */
+    private boolean isMaxAttemptsReached() {
+        try {
+            WebElement maxAttemptsError = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div[contains(text(),'Maximum attempts reached. Retry in 24 hours.')]")
+            ));
+            return maxAttemptsError.isDisplayed();
+        } catch (Exception e) {
+            return false; // No max attempts error found, continue normally
+        }
+    }
+
 
     public void enterOtpManually() {
         // Wait until OTP fields appear
