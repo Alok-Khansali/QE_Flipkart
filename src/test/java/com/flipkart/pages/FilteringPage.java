@@ -24,9 +24,12 @@ public class FilteringPage {
 		driver.get("https://www.flipkart.com/");
 		PageFactory.initElements(driver, this);
 		
-		
+		WebElement popup = driver.findElement(By.xpath("/html/body/div[3]/div/span"));
+		if(popup.isDisplayed()) {
+			popup.click();
+		}
 		searchbar.sendKeys(product);
-		searchbar.click();
+		searchbar.submit();
 	}
 	
 	public void filteroptions() {

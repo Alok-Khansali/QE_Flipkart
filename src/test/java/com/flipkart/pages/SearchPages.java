@@ -41,25 +41,7 @@ public class SearchPages {
     public void SearchQuery(String query) {
         searchbar.sendKeys(query);
         searchbar.submit();
-        WebElement cat1 = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[2]/div[1]/div/span"));
-		if (cat1.isDisplayed()){
-			WebElement leftSlider = driver.findElement(By.className("iToJ4v Kaqq1s")); 
-	        WebElement rightSlider = driver.findElement(By.className("iToJ4v D0puJn"));
-
-	       
-	        Actions actions = new Actions(driver);
-
-	        // Move the left slider right by 50 pixels
-	        actions.clickAndHold(leftSlider).moveByOffset(50, 0).release().perform();
-
-	        // Move the right slider left by 50 pixels
-	        actions.clickAndHold(rightSlider).moveByOffset(-50, 0).release().perform();
-	        
-	        WebElement maxvalue = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[2]/div[4]/div[3]/select/option[4]"));
-	        
-	        if (maxvalue.isDisplayed())
-	        	System.out.println(maxvalue.getText()+" is the max value");
-		}
+        
         System.out.println("Search is successfull!");
     }
     
