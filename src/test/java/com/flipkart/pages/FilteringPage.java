@@ -1,5 +1,7 @@
 package com.flipkart.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FilteringPage {
 	
@@ -92,8 +96,9 @@ public class FilteringPage {
 		Thread.sleep(3000);
 		checkbox2.click();
 		Thread.sleep(3000);
-		if(driver.findElement(By.xpath("//*[@id=\\\"container\\\"]/div/div[3]/div/div[1]/div/div[1]/div/section[7]/div[2]/div/div[3]/div/label/input")).isSelected()) {
-			System.out.println("4GB, 8GB & Above are selected");
+		if(driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[1]/div/div[1]/div/section[7]/div[2]/div/div[3]/div/label/input")).isSelected()) {
+			if (driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[1]/div/div[1]/div/section[7]/div[2]/div/div[2]/div/label/input")).isSelected())
+				System.out.println("4GB, 8GB & Above are selected");
 		}
 		
 	}
@@ -112,10 +117,54 @@ public class FilteringPage {
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,100)");
-		if(driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[5]/div[2]/div/div[1]/div/label/input")).isSelected()) {
+		if(driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[1]/div/div[1]/div/section[5]/div[2]/div/div[2]/div/label/input")).isSelected()) {
 			System.out.println("rating is selected");
 		}
 	}
 	
-	
+public void selectROM() throws Exception{
+		
+		Thread.sleep(1000);
+		
+		
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,800)");
+		WebElement internal_storage =  driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[1]/div/div[1]/div/section[8]/div/div"));
+		internal_storage.click(); 
+		Thread.sleep(2000);
+		
+		
+		WebElement checkbox1 = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[1]/div/div[1]/div/section[8]/div[2]/div/div[1]/div/label/div[2]"));
+		
+		
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 * WebElement element =
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//*[@id='container']/div/div[3]/div[1]/div[1]/div/div[1]/div/section[8]/div[2]/div/div[1]/div/label/div[2]"
+		 * ))); element.click();
+		 */
+		checkbox1.click();
+		
+		Thread.sleep(3000);
+		WebElement battery = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[1]/div/div[1]/div/section[9]/div/div"));
+		battery.click();
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 * WebElement element
+		 * =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//*[@id='container']/div/div[3]/div[1]/div[1]/div/div[1]/div/section[8]/div[2]/div/div[1]/div/label/div[2]"
+		 * ))); element.click();
+		 */
+		WebElement checkbox2 = driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[9]/div[2]/div/div[2]/div/label/div[2]"));
+		checkbox2.click();
+		Thread.sleep(3000);
+		internal_storage.click();
+		battery.click();
+		if(driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[8]/div[2]/div/div[2]/div/label/input")).isSelected()) {
+			if (driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div/div[1]/div/div[1]/div/section[9]/div[2]/div/div[2]/div/label/input")).isSelected())
+				System.out.println("Storage and Battery are selected");
+		}
+		
+	}
 }
