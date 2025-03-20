@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.tests.WebDriverManager">
+      <class name="com.flipkart.tests.CartTest">
         <methods>
+          <include name="testAddToCart" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="FilterFuntions"/>
-          <include name="quitDriver"/>
         </methods>
-      </class> <!-- com.flipkart.tests.WebDriverManager -->
+      </class> <!-- com.flipkart.tests.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

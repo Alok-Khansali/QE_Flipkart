@@ -1,21 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-18T15:31:08 IST" name="Default suite" finished-at="2025-03-18T15:31:45 IST" duration-ms="37351">
+  <suite started-at="2025-03-20T13:01:28 IST" name="Default suite" finished-at="2025-03-20T13:01:52 IST" duration-ms="23785">
     <groups>
     </groups>
-    <test started-at="2025-03-18T15:31:08 IST" name="Default test" finished-at="2025-03-18T15:31:45 IST" duration-ms="37351">
-      <class name="com.flipkart.tests.FlipkartLoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.FlipkartLoginTest@7dcf94f8]" started-at="2025-03-18T15:31:08 IST" name="setup" finished-at="2025-03-18T15:31:22 IST" duration-ms="14031" status="PASS">
+    <test started-at="2025-03-20T13:01:28 IST" name="Default test" finished-at="2025-03-20T13:01:52 IST" duration-ms="23785">
+      <class name="com.flipkart.tests.CartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.flipkart.tests.CartTest@1a677343]" started-at="2025-03-20T13:01:28 IST" name="setup" finished-at="2025-03-20T13:01:39 IST" duration-ms="10255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLoginWithOtp()[pri:1, instance:com.flipkart.tests.FlipkartLoginTest@7dcf94f8]" started-at="2025-03-18T15:31:22 IST" name="testLoginWithOtp" finished-at="2025-03-18T15:31:45 IST" duration-ms="23247" status="PASS">
+        <test-method signature="testAddToCart(java.lang.String,java.lang.String,int)[pri:0, instance:com.flipkart.tests.CartTest@1a677343]" started-at="2025-03-20T13:01:39 IST" name="testAddToCart" data-provider="cartData" finished-at="2025-03-20T13:01:52 IST" duration-ms="13450" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iPhone 15 Pro Max]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Blue Titanium]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'product-title')] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, 'product-title')] (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at com.flipkart.pages.SearchPages.SearchQuery(SearchPages.java:57)
+at com.flipkart.tests.CartTest.testAddToCart(CartTest.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(@class, 'product-title')]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7333376-cb75-411b-a869-c48bceb5b713, findElement {using=xpath, value=//div[contains(@class, 'product-title')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 136.0.1, moz:accessibilityChecks: false, moz:buildID: 20250310180126, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33464, moz:profile: C:\Users\ALOKKH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: a7333376-cb75-411b-a869-c48bceb5b713
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginWithOtp -->
-      </class> <!-- com.flipkart.tests.FlipkartLoginTest -->
+        </test-method> <!-- testAddToCart -->
+      </class> <!-- com.flipkart.tests.CartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

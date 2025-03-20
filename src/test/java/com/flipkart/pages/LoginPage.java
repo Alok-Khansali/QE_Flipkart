@@ -40,12 +40,13 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void enterMobileNumber(String mobileNumber) {
+    public void enterMobileNumber(String mobileNumber)  {
         try {
             // Step 1: Click the Login button
+        	wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             System.out.println("Clicking the login button...");
             wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
-
+            
             // Step 2: Wait for the correct login input field (Avoiding search box)
             System.out.println("Waiting for the correct login input field...");
             mobileNumberInput = driver.findElement(By.cssSelector(".r4vIwl"));
