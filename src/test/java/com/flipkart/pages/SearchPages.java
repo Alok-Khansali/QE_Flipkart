@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,18 +37,12 @@ public class SearchPages {
 		PageFactory.initElements(driver, this); //this
 	}
 	
-	public void SearchQuery(String productName) {
-	    try {
-	        WebElement searchBox = driver.findElement(By.xpath("//*[@id='container']//input[@type='text']")); // Find it fresh
-	        searchBox.clear();
-	        searchBox.sendKeys(productName);
-	        searchBox.sendKeys(Keys.ENTER);
-	        System.out.println("Search is successful!");
-	    } catch (Exception e) {
-	        System.out.println("Search failed: " + e.getMessage());
-	    }
-	}
-
+    public void SearchQuery(String query) {
+        searchbar.sendKeys(query);
+        searchbar.submit();
+        
+        System.out.println("Search is successfull!");
+    }
     
     public void SearchInvalid(String query) {
         searchbar.sendKeys(query);

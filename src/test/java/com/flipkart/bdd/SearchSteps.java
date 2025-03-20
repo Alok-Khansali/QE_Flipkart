@@ -43,7 +43,7 @@ public class SearchSteps {
     }
 
     @When("I select a sorting option")
-    public void i_select_a_sorting_option() {
+    public void i_select_a_sorting_option() throws Exception {
         searchPages.selectSortOption();
     }
 

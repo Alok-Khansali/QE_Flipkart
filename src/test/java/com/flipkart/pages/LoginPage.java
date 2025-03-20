@@ -129,4 +129,9 @@ public class LoginPage {
         wait.until(ExpectedConditions.elementToBeClickable(signUpLink)).click();
         return new SignUpPage(driver);
     }
+
+	public PasswordResetPage clickForgotPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

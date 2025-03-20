@@ -9,12 +9,6 @@ import org.testng.annotations.Test;
 import com.flipkart.pages.LoginPage;
 import com.flipkart.pages.PasswordResetPage;
 
-import com.flipkart.pages.LoginPage;
-import com.flipkart.pages.PasswordResetPage;
-
-import com.flipkart.pages.LoginPage;
-import com.flipkart.pages.PasswordResetPage;
-
 public class FlipkartPasswordResetTest {
 
     WebDriver driver;
