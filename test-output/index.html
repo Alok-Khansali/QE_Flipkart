@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,11 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-<<<<<<< HEAD
-                    <span>C:\Users\AlokKhansali\AppData\Local\Temp\testng-eclipse-1372687412\testng-customsuite.xml</span>
-=======
-                    <span>C:\Users\VigneshwarS\AppData\Local\Temp\testng-eclipse-1707011084\testng-customsuite.xml</span>
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+                    <span>C:\Users\AlokKhansali\AppData\Local\Temp\testng-eclipse--1363981803\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -97,25 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-<<<<<<< HEAD
-                        <a href="#" panel-name="suite-Default_suite" title="com.flipkart.tests.CartTest" class="method navigator-link" hash-for-method="testAddToCart(iPhone 15 Pro Max, Blue Titanium, 1)">testAddToCart(iPhone 15 Pro Max, Blue Titanium, 1)</a> <!-- method navigator-link -->
-=======
-                        <a href="#" panel-name="suite-Default_suite" title="com.flipkart.tests.WebDriverManager" class="method navigator-link" hash-for-method="FilterFuntions">FilterFuntions</a> <!-- method navigator-link -->
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.flipkart.tests.CartTest" class="method navigator-link" hash-for-method="testAddToCart(poco)">testAddToCart(poco)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.flipkart.tests.CartTest" class="method navigator-link" hash-for-method="testAddToCart(samsung 5g mobile)">testAddToCart(samsung 5g mobile)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,111 +124,34 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-<<<<<<< HEAD
+              <img src="passed.png"/>
               <span class="class-name">com.flipkart.tests.CartTest</span>
-=======
-              <span class="class-name">com.flipkart.tests.WebDriverManager</span>
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-<<<<<<< HEAD
-                  <a name="testAddToCart(iPhone 15 Pro Max, Blue Titanium, 1)">
-                  </a> <!-- testAddToCart(iPhone 15 Pro Max, Blue Titanium, 1) -->
+                  <a name="testAddToCart(poco)">
+                  </a> <!-- testAddToCart(poco) -->
                   <span class="method-name">testAddToCart</span>
-                  <span class="parameters">(iPhone 15 Pro Max, Blue Titanium, 1)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[contains(@class, &apos;product-title&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at com.flipkart.pages.SearchPages.SearchQuery(SearchPages.java:57)
-	at com.flipkart.tests.CartTest.testAddToCart(CartTest.java:60)
-=======
-                  <a name="FilterFuntions">
-                  </a> <!-- FilterFuntions -->
-                  <span class="method-name">FilterFuntions</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.By$ByClassName.&lt;init&gt;(By.java:309)
-	at org.openqa.selenium.By.className(By.java:100)
-	at com.flipkart.pages.FilteringPage.filteroptions(FilteringPage.java:39)
-	at com.flipkart.tests.WebDriverManager.FilterFuntions(WebDriverManager.java:54)
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-<<<<<<< HEAD
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[contains(@class, &apos;product-title&apos;)]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [a7333376-cb75-411b-a869-c48bceb5b713, findElement {using=xpath, value=//div[contains(@class, &apos;product-title&apos;)]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 136.0.1, moz:accessibilityChecks: false, moz:buildID: 20250310180126, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33464, moz:profile: C:\Users\ALOKKH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: a7333376-cb75-411b-a869-c48bceb5b713
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-	... 28 more
-=======
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
-
-</div> <!-- stack-trace -->
+                  <span class="parameters">(poco)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddToCart(samsung 5g mobile)">
+                  </a> <!-- testAddToCart(samsung 5g mobile) -->
+                  <span class="method-name">testAddToCart</span>
+                  <span class="parameters">(samsung 5g mobile)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-<<<<<<< HEAD
-            <span class="header-content">C:\Users\AlokKhansali\AppData\Local\Temp\testng-eclipse-1372687412\testng-customsuite.xml</span>
-=======
-            <span class="header-content">C:\Users\VigneshwarS\AppData\Local\Temp\testng-eclipse-1707011084\testng-customsuite.xml</span>
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+            <span class="header-content">C:\Users\AlokKhansali\AppData\Local\Temp\testng-eclipse--1363981803\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -240,19 +160,7 @@ Session ID: a7333376-cb75-411b-a869-c48bceb5b713
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-<<<<<<< HEAD
-      &lt;class name=&quot;com.flipkart.tests.CartTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;testAddToCart&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.flipkart.tests.CartTest --&gt;
-=======
-      &lt;class name=&quot;com.flipkart.tests.WebDriverManager&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;FilterFuntions&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.flipkart.tests.WebDriverManager --&gt;
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+      &lt;class name=&quot;com.flipkart.tests.CartTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -292,26 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-<<<<<<< HEAD
 data.setCell(0, 1, 'testAddToCart')
 data.setCell(0, 2, 'com.flipkart.tests.CartTest')
-data.setCell(0, 3, 13450);
-=======
-data.setCell(0, 1, 'FilterFuntions')
-data.setCell(0, 2, 'com.flipkart.tests.WebDriverManager')
-data.setCell(0, 3, 839);
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+data.setCell(0, 3, 6872);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddToCart')
+data.setCell(1, 2, 'com.flipkart.tests.CartTest')
+data.setCell(1, 3, 1330);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-<<<<<<< HEAD
-              <span class="suite-total-time">Total running time: 13 seconds</span>
-=======
-              <span class="suite-total-time">Total running time: 839 ms</span>
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -326,20 +228,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.flipkart.tests.WebDriverManager</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">Invalidsearch</span>
-                <br/>
-                <span class="ignored-method-name">Partialsearch</span>
-                <br/>
-                <span class="ignored-method-name">search</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -348,34 +239,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-<<<<<<< HEAD
               <div class="chronological-class-name">com.flipkart.tests.CartTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAddToCart(iPhone 15 Pro Max, Blue Titanium, 1)</span>
-                <span class="method-start">10281 ms</span>
-=======
-              <div class="chronological-class-name">com.flipkart.tests.WebDriverManager</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">FilterFuntions</span>
-                <span class="method-start">12892 ms</span>
->>>>>>> 1111f2b07c39f5dd821ff29a3ffde024dcd8c648
+                <span class="method-name">testAddToCart(samsung 5g mobile)</span>
+                <span class="method-start">13135 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">quitDriver</span>
-                <span class="method-start">13744 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testAddToCart(poco)</span>
+                <span class="method-start">20015 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -53,14 +53,14 @@ public class CartTest {
 	 */
 
     @Test(dataProvider = "cartData")
-    public void testAddToCart(String productName, String variant, int quantity) throws InterruptedException {
-        System.out.println("Testing Add to Cart for: " + productName + " - " + variant + " (Quantity: " + quantity + ")");
+    public void testAddToCart(String productName) throws InterruptedException {
+        System.out.println("Testing Add to Cart for: " + productName );
 
         // Search for the product
         searchPage.SearchQuery(productName);
 
         // Try adding product to cart
-        boolean itemAdded = cartPage.addToCart(productName, variant, quantity);
+        boolean itemAdded = cartPage.addToCart(productName);
 
         if (!itemAdded) {
             System.out.println("⚠️ Skipping remaining tests for " + productName + " (Out of Stock)");

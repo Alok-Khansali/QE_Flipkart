@@ -5,7 +5,7 @@
     <classes>
       <class name="com.flipkart.tests.CartTest">
         <methods>
-          <include name="testAddToCart" invocation-numbers="0"/>
+          <include name="testAddToCart" invocation-numbers="0 1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.flipkart.tests.CartTest -->
