@@ -37,8 +37,8 @@ public class LoginFunctinality {
 	}
 	
 	@Test
-	public void FilterFuntions() {
-		filters.filteroptions();
+	public void FilterFuntions() throws Exception {
+		filters.filterprice();
 	}
 	
 	@AfterMethod
